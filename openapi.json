@@ -8,7 +8,7 @@
     "/orders": {
       "get": {
         "tags": [
-          "order-controller",
+          "order-controller"
         ],
         "operationId": "getOrders",
         "parameters": [
