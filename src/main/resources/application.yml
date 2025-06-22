@@ -4,7 +4,7 @@ spring:
   application:
     name: yandex-lavka-25
   datasource:
-    url: jdbc:postgres://localhost:5435/postgres # TODO Поменять название БДб порт
+    url: jdbc:postgresql://localhost:5435/postgres # TODO Поменять название БДб порт
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: rootroot
