@@ -27,10 +27,6 @@ public class Orders {
     @Column(nullable = false)
     private Integer regions;
 
-
-//    @Enumerated(EnumType.STRING)
-//    private OrdersSource source;
-
     @ElementCollection
     @CollectionTable(name = "order_delivery_hours",
             joinColumns = @JoinColumn(name = "order_id"))
@@ -43,7 +39,7 @@ public class Orders {
     @Column(name = "completed_time")
     private LocalDateTime completedTime;
 
-//    Конструктор для создания из DTO
+    //    Конструктор для создания из DTO
     public Orders(Float weight, Integer regions, List<String> deliveryHours, Integer cost) {
         this.weight = weight;
         this.regions = regions;
