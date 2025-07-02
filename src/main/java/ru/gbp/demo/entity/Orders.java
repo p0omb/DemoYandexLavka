@@ -5,8 +5,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.gbp.demo.enums.OrdersSource;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
