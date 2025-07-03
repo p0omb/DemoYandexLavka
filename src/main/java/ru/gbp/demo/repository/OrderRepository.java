@@ -8,7 +8,6 @@ import ru.gbp.demo.enums.OrdersSource;
 import java.util.List;
 
 @Repository
-public interface OrdersDao extends JpaRepository<Orders, Long> {
-    List<Orders> findAllBySourceAndProcessedFalse(OrdersSource source);
+public interface OrderRepository extends JpaRepository<Orders, Long> {
 }
 
