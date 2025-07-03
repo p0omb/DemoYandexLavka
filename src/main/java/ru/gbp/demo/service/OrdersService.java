@@ -1,16 +1,19 @@
 package ru.gbp.demo.service;
 
+//import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.jaxb.SpringDataJaxb;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
+//import org.springframework.data.domain.jaxb.SpringDataJaxb;
+//import org.springframework.data.jpa.repository.JpaRepository;
+//import org.springframework.data.jpa.repository.Query;
+//import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import ru.gbp.demo.model.OrderDTO;
 import ru.gbp.demo.repository.OrderRepository;
+import ru.gbp.demo.entity.Orders;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 //@Repository
