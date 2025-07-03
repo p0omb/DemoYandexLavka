@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.jpa.repository.Query;
 //import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import ru.gbp.demo.model.OrderDTO;
+import ru.gbp.demo.model.OrderDto;
 import ru.gbp.demo.repository.OrderRepository;
 import ru.gbp.demo.entity.Orders;
 import java.time.LocalDateTime;
@@ -21,19 +21,19 @@ public class OrdersService {
     private OrderRepository orderRepository;
 
     //Получение заказов из БД
-    public List<OrderDTO> getOrders() {
+    public List<OrderDto> getOrders() {
 
         // 1)Получение всех сущностей из БД
         List<Orders> ordersFromDB = orderRepository.findAll();
 
         // 2)Конвертация каждой сущности в DTO
         return ordersFromDB.stream()
-                .map(this::convertToDTO)
+                .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
     //Конвертация Сущности в DTO
-    private OrderDTO convertToDTO(Orders orderEntity) {
-        return new OrderDTO(
+    private OrderDto convertToDto(Orders orderEntity) {
+        return new OrderDto(
                 orderEntity.getOrderId(),
                 orderEntity.getWeight(),
                 orderEntity.getRegions(),
@@ -45,10 +45,10 @@ public class OrdersService {
 
 
     //Тестовые данные
-    public List<OrderDTO> getOrdersTest() {
+    public List<OrderDto> getOrdersTest() {
         return List.of(
-                new OrderDTO(1L, 1F, 1, List.of("15:12-16:12"), 1, LocalDateTime.now()),
-                new OrderDTO(341244L, 4.321F, 54, List.of("12:30-14:50"), 8790, LocalDateTime.now())
+                new OrderDto(1L, 1F, 1, List.of("15:12-16:12"), 1, LocalDateTime.now()),
+                new OrderDto(341244L, 4.321F, 54, List.of("12:30-14:50"), 8790, LocalDateTime.now())
         );
     }
 }
