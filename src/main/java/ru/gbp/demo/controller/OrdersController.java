@@ -19,7 +19,7 @@ public class OrdersController {
 
     @GetMapping
     public List<OrderDTO> orders() {
-      return ordersService.getOrders();
+      return ordersService.getOrdersTest();
     }
 
 
