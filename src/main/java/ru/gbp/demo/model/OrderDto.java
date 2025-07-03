@@ -1,7 +1,6 @@
 package ru.gbp.demo.model;
 
 import lombok.*;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
 @Getter
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class OrderDTO {
+public class OrderDto {
     private final Long orderId;
     private final Float weight;
     private final Integer regions;
