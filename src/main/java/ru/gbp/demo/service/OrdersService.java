@@ -49,7 +49,7 @@ public class OrdersService {
     public List<OrderDTO> getOrdersTest() {
         return List.of(
                 new OrderDTO(1L, 1F, 1, List.of("15:12-16:12"), 1, LocalDateTime.now()),
-                new OrderDTO(3412144L, 4.321F, 54, List.of("12:30-14:50"), 8790, LocalDateTime.now())
+                new OrderDTO(341244L, 4.321F, 54, List.of("12:30-14:50"), 8790, LocalDateTime.now())
         );
     }
 }
