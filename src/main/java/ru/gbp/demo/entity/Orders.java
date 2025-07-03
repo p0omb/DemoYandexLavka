@@ -2,16 +2,15 @@ package ru.gbp.demo.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "orders")
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Orders {
@@ -30,7 +29,7 @@ public class Orders {
     @ElementCollection
     @CollectionTable(name = "order_delivery_hours",
             joinColumns = @JoinColumn(name = "order_id"))
-    @Column(name = "delivery_hour")
+    @Column(name = "delivery_hours")
     private List<String> deliveryHours = new ArrayList<>();
 
     @Column(nullable = false)
