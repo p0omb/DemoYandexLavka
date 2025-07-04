@@ -1,5 +1,6 @@
 package ru.gbp.demo.controller;
 
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/orders")
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class OrdersController {
 
     private final OrdersService ordersService;
@@ -19,18 +21,7 @@ public class OrdersController {
     public List<OrderDto> orders() {
       return ordersService.getOrdersTest();
     }
-////    GET /couriers
-//    @GetMapping(produces = APPLICATION_JSON_VALUE)
-//    public List<courierResponce> findAll() {
-//        return userService.findAll();
-//    }
-////    GET /couriers/{courier_id}
-//    @GetMapping(value = "/{courier_Id}", produces = APPLICATION_JSON_VALUE)
-//    public UserResponse findById(@PathVariable Integer userId) {
-//        return userService.findById(userId);
-    }
-
 //    public ResponseEntity<List<Orders>> getOrders() {
 //        return ResponseEntity.ok().body(ordersService.getAllOrders());
 //    }
-//}
+}
