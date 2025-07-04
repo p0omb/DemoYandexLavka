@@ -38,8 +38,7 @@ public class OrdersService {
                 orderEntity.getWeight(),
                 orderEntity.getRegions(),
                 orderEntity.getDeliveryHours(),
-                orderEntity.getCost(),
-                orderEntity.getCompletedTime()
+                orderEntity.getCost()
         );
     }
 
@@ -47,8 +46,8 @@ public class OrdersService {
     //Тестовые данные
     public List<OrderDto> getOrdersTest() {
         return List.of(
-                new OrderDto(1L, 1F, 1, List.of("15:12-16:12"), 1, LocalDateTime.now()),
-                new OrderDto(341244L, 4.321F, 54, List.of("12:30-14:50"), 8790, LocalDateTime.now())
+                new OrderDto(1, 1F, 1, List.of("15:12-16:12"), 1 ),
+                new OrderDto(34124, 4.321F, 54, List.of("12:30-14:50"), 8790)
         );
     }
 }
