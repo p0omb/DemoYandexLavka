@@ -2,14 +2,11 @@ package ru.gbp.demo.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.gbp.demo.model.OrderDto;
+import ru.gbp.demo.dto.OrderDto;
 import ru.gbp.demo.service.OrdersService;
 import java.util.List;
-
-import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping("/orders")

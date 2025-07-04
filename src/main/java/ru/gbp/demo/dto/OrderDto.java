@@ -1,4 +1,4 @@
-package ru.gbp.demo.model;
+package ru.gbp.demo.dto;
 
 import lombok.*;
 import java.time.LocalDateTime;
