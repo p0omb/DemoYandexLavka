@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "order")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -18,7 +18,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
-    private Long orderId;
+    private Integer orderId;
 
     @Column(nullable = false)
     private Float weight;
@@ -35,11 +35,11 @@ public class Order {
     @Column(nullable = false)
     private Integer cost;
 
-    @Column(name = "completed_time")
-    private LocalDateTime completedTime;
+//    @Column(name = "completed_time")
+//    private LocalDateTime completedTime;
 
-    @Column(name = "assigned_courier_id")
-    private Long assignedCourierId;;
+//    @Column(name = "assiwgned_courier_id")
+//    private Long assignedCourierId;;
 
 
     //    Конструктор для создания из DTO
