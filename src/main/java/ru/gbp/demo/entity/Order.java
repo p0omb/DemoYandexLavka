@@ -13,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Orders {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,8 +38,12 @@ public class Orders {
     @Column(name = "completed_time")
     private LocalDateTime completedTime;
 
+    @Column(name = "assigned_courier_id")
+    private Long assignedCourierId;;
+
+
     //    Конструктор для создания из DTO
-    public Orders(Float weight, Integer regions, List<String> deliveryHours, Integer cost) {
+    public Order(Float weight, Integer regions, List<String> deliveryHours, Integer cost) {
         this.weight = weight;
         this.regions = regions;
         this.deliveryHours = deliveryHours != null ? new ArrayList<>(deliveryHours) : new ArrayList<>();

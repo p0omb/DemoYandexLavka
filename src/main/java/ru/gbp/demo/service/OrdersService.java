@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.jpa.repository.Query;
 //import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
-import ru.gbp.demo.model.OrderDto;
+import ru.gbp.demo.dto.OrderDto;
 import ru.gbp.demo.repository.OrderRepository;
-import ru.gbp.demo.entity.Orders;
+import ru.gbp.demo.entity.Order;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -24,15 +24,15 @@ public class OrdersService {
     public List<OrderDto> getOrders() {
 
         // 1)Получение всех сущностей из БД
-        List<Orders> ordersFromDB = orderRepository.findAll();
+        List<Order> orderFromDB = orderRepository.findAll();
 
         // 2)Конвертация каждой сущности в DTO
-        return ordersFromDB.stream()
+        return orderFromDB.stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
     }
     //Конвертация Сущности в DTO
-    private OrderDto convertToDto(Orders orderEntity) {
+    private OrderDto convertToDto(Order orderEntity) {
         return new OrderDto(
                 orderEntity.getOrderId(),
                 orderEntity.getWeight(),
