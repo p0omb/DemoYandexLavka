@@ -1,7 +1,6 @@
-package ru.gbp.demo.model;
+package ru.gbp.demo.dto;
 
 import lombok.*;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,27 +10,11 @@ import java.util.List;
 @Getter
 @EqualsAndHashCode
 @RequiredArgsConstructor
-public class OrderDTO {
-
-
-    private final Long orderId;
-
-
-    private final  Float weight;
-
-
+public class OrderDto {
+    private final Integer orderId;
+    private final Float weight;
     private final Integer regions;
-
-
-    private  List<String> deliveryHours = new ArrayList<>();
-
-
+    private List<String> deliveryHours = new ArrayList<>();
     private final Integer cost;
-
-
-    private final LocalDateTime completedTime;
-
-
-
-
+//    private final LocalDateTime completedTime;
 }
